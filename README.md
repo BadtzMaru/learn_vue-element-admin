@@ -1,24 +1,5 @@
-# temp_vue-element-admin
+# element-ui 按需引入
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-   `vue add element`
+-   选择 Imprt on demand
+-   选择 zh-CN

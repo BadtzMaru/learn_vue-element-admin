@@ -1,7 +1,6 @@
 <template>
 	<div>
-		<el-button>123</el-button>
-		<router-view />
+		登陆
 	</div>
 </template>
 
