@@ -1,6 +1,7 @@
 <template>
-	<div>
-		登陆
+	<div class="login-container">
+		123
+		<span class="test">登陆</span>
 	</div>
 </template>
 
@@ -8,4 +9,11 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+$bg: #31e424;
+.login-container {
+	.test {
+		color: $bg;
+	}
+}
+</style>

@@ -1,8 +1,15 @@
 import Vue from 'vue';
+
+import 'normalize.css/normalize.css';
+
+import Element from 'element-ui';
+import './styles/element-variables.scss';
+
+import '@/styles/index.scss'; // 全局CSS样式
+
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import Element from 'element-ui';
 
 Vue.config.productionTip = false;
 

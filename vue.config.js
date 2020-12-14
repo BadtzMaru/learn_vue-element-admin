@@ -8,5 +8,6 @@ module.exports = {
 	devServer: {
 		port: port,
 		open: false,
+		before: require('./mock/mock-server.js'),
 	},
 };
