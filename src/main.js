@@ -8,16 +8,13 @@ import './styles/element-variables.scss';
 import '@/styles/index.scss'; // 全局CSS样式
 
 import App from './App.vue';
-import router from './router';
 import store from './store';
+import router from './router';
+
+import './icons'; // 引入SVG图标组件
+import './permission'; // 权限控制
 
 Vue.config.productionTip = false;
-
-/* 开起 mockjs */
-if (process.env.NODE_ENV == 'production') {
-	const { mockXHR } = require('../mock');
-	mockXHR();
-}
 
 Vue.use(Element, {
 	size: 'medium',

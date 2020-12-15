@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import getters from './getters';
 
 Vue.use(Vuex);
 
@@ -12,7 +13,7 @@ Vue.use(Vuex);
 
 const modulesFiles = require.context('./modules', true, /\.js$/);
 const modules = modulesFiles.keys().reduce((modules, modulePath) => {
-	// 把 './user.js' 转化成 'user', 匹配正则 /^\.\/(.*)\.\w+$/  => /^ , \. , \/ , (.*) , \. , \w+ $/
+	// 把 './user.js' 转化成 'user'
 	const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1');
 	const value = modulesFiles(modulePath);
 	modules[moduleName] = value.default;
@@ -20,6 +21,6 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
 }, {});
 
 /* 创建store实例 */
-const store = new Vuex.Store({ modules });
+const store = new Vuex.Store({ modules, getters });
 
 export default store;

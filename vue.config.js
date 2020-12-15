@@ -7,7 +7,17 @@ module.exports = {
 	lintOnSave: false, // 关闭eslint检测
 	devServer: {
 		port: port,
-		open: false,
+		open: true,
 		before: require('./mock/mock-server.js'),
+	},
+	chainWebpack: (config) => {
+		const svgRule = config.module.rule('svg');
+		svgRule.uses.clear();
+		svgRule
+			.use('svg-sprite-loader')
+			.loader('svg-sprite-loader')
+			.options({
+				symbolId: 'icon-[name]',
+			});
 	},
 };

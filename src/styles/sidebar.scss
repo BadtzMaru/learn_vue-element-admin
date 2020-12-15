@@ -1,0 +1,9 @@
+#app {
+	.sidebar-container {
+		&.has-logo {
+			.el-scrollbar {
+				height: calc(100% - 50px);
+			}
+		}
+	}
+}

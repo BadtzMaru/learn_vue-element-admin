@@ -1,4 +1,4 @@
-const token = {
+const tokens = {
 	admin: {
 		token: 'admin-token',
 	},
@@ -7,7 +7,7 @@ const token = {
 	},
 };
 
-const user = {
+const users = {
 	'admin-token': {
 		roles: ['admin'],
 		introduction: '我是超级管理员',
@@ -42,6 +42,22 @@ module.exports = [
 				code: 20000,
 				data: token,
 			};
+		},
+	},
+	// 获取用户信息
+	{
+		url: '/vue-element-admin/user/info\.*',
+		type: 'get',
+		response: (config) => {
+			const { token } = config.query;
+			const info = users[token];
+			if (!info) {
+				return {
+					code: 50008,
+					message: 'token验证失败,无法获取用户信息',
+				};
+			}
+			return { code: 20000, data: info };
 		},
 	},
 ];
