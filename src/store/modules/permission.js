@@ -25,7 +25,7 @@ export function filterAsyncRoutes(routes, roles) {
 }
 
 const state = {
-	routes: [], // 全部可以访问的路由
+	routes: [], // 全部可以访问的路由, 主页左侧菜单渲染使用
 	addRoutes: [], // 从 asyncRoutes 过滤出来可以访问的路由
 };
 

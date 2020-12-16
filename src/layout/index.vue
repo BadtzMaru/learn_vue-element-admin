@@ -7,7 +7,7 @@
 			@click="handleClickOutside"
 		/>
 		<!-- 侧边栏菜单栏 -->
-		<sidebar />
+		<sidebar class="sidebar-container"/>
 	</div>
 </template>
 
